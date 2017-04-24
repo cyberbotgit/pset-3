@@ -204,7 +204,46 @@ void draw(void)
  */
 bool move(int tile)
 {
+    // TODO
+    int i,j,p,q,c;
+    for( i = 0; i < d ; i++)
+    {
+        for( j = 0; j < d; j++)
+        {
+            if (tile == board[i][j])
+            {
+                goto end1;
+                
+            }
+        }
+    }
+    
+     end1:
+     
+    
+    for(p = 0; p < d; p++)
+    {
+        for(q = 0; q < d; q++)
+        {
+            if(board[p][q] == 0)
+            {
+                goto end2;
+            }
+        }
+    }
+    
+    end2:
   
+
+   if( (((p - i == 1 || i - p == 1)) && ((q - j)  == 0)) || (((q - j == 1 || j - q  == 1) && ((i - p)  == 0) )  ))
+   {
+    c = board[i][j];
+    board[i][j] = board[p][q];
+    board[p][q] = c;
+    return true;
+   }
+     
+    return false;
 }
  
 /**,
