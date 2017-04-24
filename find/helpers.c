@@ -54,7 +54,10 @@ void sort(int values[], int n)
     {
     for(int i = count; i <= n; i++)
     {
-       
+        if(values[i] < values[sml])
+        {
+            sml = i;
+        }
     }
     
        //swap( &values[count], &values[sml]);
