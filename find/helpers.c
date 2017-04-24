@@ -19,7 +19,13 @@ bool search(int value, int values[], int n)
     int mid = (low + high) / 2;
     while(mid != low)
     {
-   
+         if(value < values[mid])
+        {
+             high = mid;
+            mid = (low + mid) / 2;
+           
+            
+        }
        
        
         
