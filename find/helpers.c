@@ -32,7 +32,10 @@ bool search(int value, int values[], int n)
             mid = (high + mid) / 2;
            
         }
-       
+        else
+        {
+            return true;
+        }
         
     }
     return false;
