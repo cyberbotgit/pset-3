@@ -62,7 +62,11 @@ void sort(int values[], int n)
     
        //swap( &values[count], &values[sml]);
        
-    
+       int c = *(&values[count]);
+       *(&values[count]) = *(&values[sml]);
+       *(&values[sml]) = c;
+        count++;
+        sml = count;
     }
     
     
